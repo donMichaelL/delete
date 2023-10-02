@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+target-version = ['py38']
+
+[tool.mypy]
+mypy_path = "src/"
+namespace_packages = false
+show_error_codes = true
+strict = false
+warn_unreachable = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+allow_untyped_defs = true
